@@ -16,7 +16,7 @@ pandas
 3. The user should have use access to the snowflake warehouse mentioned. (part of the parameterization, discussed in detail below)
 4. The warehouse should have query privilege in the target database and ALL OTHER source databases that may have lineage associations. (part of the parameterization, discussed in detail below)
 5. Save the notebook under a schema where the user has read access (**Let's assume the location as notebook_database.notebook_schema.sourcetotargetmapping**)
-6. A schema named LINEAGE should be created under the target database where the lineage data would be populated. (part of the parameterization, discussed in detail below)
+6. A schema named **ARTIFACTS** should be created under the target database where the lineage data would be populated in a table named **LINEAGE**. (part of the parameterization, discussed in detail below)
 
 # How to operate?
 The notebook/program can be utilized in one of several ways -
@@ -35,10 +35,13 @@ The notebook/program can be utilized in one of several ways -
    EXECUTE NOTEBOOK notebook_database.notebook_schema.sourcetotargetmapping('USER1,WH1,DB1,SC1') #the code will check for SC1 schema under DB1 databse for lineage data
    EXECUTE NOTEBOOK notebook_database.notebook_schema.sourcetotargetmapping('USER1,WH1,DB1') #the code will check for ALL schemas under DB1 databse for lineage data
 
-2. Update the code at the Cell2 of the Python notebook
+2. Update the code at the Cell2 of the Python notebook-
+   
    <img width="462" height="107" alt="image" src="https://github.com/user-attachments/assets/cef259cf-bf5c-4612-8b36-52d7420aaa40" />
+
+   Feel free to customize the user, warehouse, database and schema variables as per your need.
   
-4. Schedule the notebook from snowflake notebook section with parameters
+3. Schedule the notebook from snowflake notebook section with parameters
 
 
 
