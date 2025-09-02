@@ -22,7 +22,7 @@ pandas
 The notebook/program can be utilized in one of several ways -
 
 1. Use the parametermization technique. From a snowsight SQL query worksheet, run the notebook using the following command-
-   EXECUTE NOTEBOOK notebook_database.notebook_schema.sourcetotargetmapping('<username>,<warehouse>,<target_database>,<list_of_target_schemas>')
+   EXECUTE NOTEBOOK notebook_database.notebook_schema.sourcetotargetmapping('<user_name>,<snowflake_warehouse>,<target_database>,<list_of_target_schemas>')
    
    # Semantics:
    
