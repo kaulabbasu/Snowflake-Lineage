@@ -45,13 +45,13 @@ The notebook/program can be utilized in one of several ways -
    #the code will check for ALL schemas under DB1 databse for lineage data
    EXECUTE NOTEBOOK notebook_database.notebook_schema.sourcetotargetmapping('USER1,WH1,DB1')
 
-3. Update the code at the Cell2 of the Python notebook-
+2. Update the code at the Cell2 of the Python notebook-
    
    <img width="462" height="107" alt="image" src="https://github.com/user-attachments/assets/cef259cf-bf5c-4612-8b36-52d7420aaa40" />
 
    Feel free to customize the user, warehouse, database and schema variables as per your need.
   
-4. Schedule the notebook from snowflake notebook section with parameters
+3. Schedule the notebook from snowflake notebook section with parameters
 
 
 
