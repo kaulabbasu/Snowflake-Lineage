@@ -26,22 +26,25 @@ The notebook/program can be utilized in one of several ways -
    
    Semantics:
      a. user -> snowflake user (MANDATORY) : STRING
+   
      b. warehouse -> snowflake warehouse (MANDATORY) : STRING
+   
      c. target_database -> target database (MANDATORY) : STRING
+   
      d. list_of_target_schemas -> the intended schemas under the target database (OPTIONAL) : comma-separated string representation of a list of schemas
 
-   Here are some of the correct commands one can use
+   Here are some of the correct commands one can use -
    EXECUTE NOTEBOOK notebook_database.notebook_schema.sourcetotargetmapping('USER1,WH1,DB1,SC1,SC2') #the code will check for SC1 and SC2 schemas under DB1 databse for lineage data
    EXECUTE NOTEBOOK notebook_database.notebook_schema.sourcetotargetmapping('USER1,WH1,DB1,SC1') #the code will check for SC1 schema under DB1 databse for lineage data
    EXECUTE NOTEBOOK notebook_database.notebook_schema.sourcetotargetmapping('USER1,WH1,DB1') #the code will check for ALL schemas under DB1 databse for lineage data
 
-2. Update the code at the Cell2 of the Python notebook-
+3. Update the code at the Cell2 of the Python notebook-
    
    <img width="462" height="107" alt="image" src="https://github.com/user-attachments/assets/cef259cf-bf5c-4612-8b36-52d7420aaa40" />
 
    Feel free to customize the user, warehouse, database and schema variables as per your need.
   
-3. Schedule the notebook from snowflake notebook section with parameters
+4. Schedule the notebook from snowflake notebook section with parameters
 
 
 
