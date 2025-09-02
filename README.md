@@ -24,7 +24,8 @@ The notebook/program can be utilized in one of several ways -
 1. Use the parametermization technique. From a snowsight SQL query worksheet, run the notebook using the following command-
    EXECUTE NOTEBOOK notebook_database.notebook_schema.sourcetotargetmapping('<user>,<warehouse>,<target_database>,<list_of_target_schemas>')
    
-   Semantics:
+   # Semantics:
+   
      a. user -> snowflake user (MANDATORY) : STRING
    
      b. warehouse -> snowflake warehouse (MANDATORY) : STRING
@@ -33,10 +34,16 @@ The notebook/program can be utilized in one of several ways -
    
      d. list_of_target_schemas -> the intended schemas under the target database (OPTIONAL) : comma-separated string representation of a list of schemas
 
-   Here are some of the correct commands one can use -
-   EXECUTE NOTEBOOK notebook_database.notebook_schema.sourcetotargetmapping('USER1,WH1,DB1,SC1,SC2') #the code will check for SC1 and SC2 schemas under DB1 databse for lineage data
-   EXECUTE NOTEBOOK notebook_database.notebook_schema.sourcetotargetmapping('USER1,WH1,DB1,SC1') #the code will check for SC1 schema under DB1 databse for lineage data
-   EXECUTE NOTEBOOK notebook_database.notebook_schema.sourcetotargetmapping('USER1,WH1,DB1') #the code will check for ALL schemas under DB1 databse for lineage data
+   # Syntactically correct commands -
+   
+   #the code will check for SC1 and SC2 schemas under DB1 databse for lineage data
+   EXECUTE NOTEBOOK notebook_database.notebook_schema.sourcetotargetmapping('USER1,WH1,DB1,SC1,SC2')
+   
+   #the code will check for SC1 schema under DB1 databse for lineage data
+   EXECUTE NOTEBOOK notebook_database.notebook_schema.sourcetotargetmapping('USER1,WH1,DB1,SC1')
+   
+   #the code will check for ALL schemas under DB1 databse for lineage data
+   EXECUTE NOTEBOOK notebook_database.notebook_schema.sourcetotargetmapping('USER1,WH1,DB1')
 
 3. Update the code at the Cell2 of the Python notebook-
    
